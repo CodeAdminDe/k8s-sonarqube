@@ -1,4 +1,4 @@
-# rateme-netxgen-ingress
+# rateme-netxgen-sonarqube
 [![Quality Gate Status](http://sonar.rateme-nextgen.com/api/project_badges/measure?project=rateme-nextgen&metric=alert_status)](http://sonar.rateme-nextgen.com/dashboard?id=rateme-nextgen)
 
 [http://sonar.rateme-nextgen.com](http://sonar.rateme-nextgen.com)
