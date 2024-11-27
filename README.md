@@ -1,11 +1,6 @@
-# rateme-netxgen-sonarqube
-[![Quality Gate Status](http://sonar.rateme-nextgen.com/api/project_badges/measure?project=rateme-nextgen&metric=alert_status)](http://sonar.rateme-nextgen.com/dashboard?id=rateme-nextgen)
+# k8s-sonarqube
 
-[http://sonar.rateme-nextgen.com](http://sonar.rateme-nextgen.com)
-
-Our sonarqube instance running on k8s.
-
-Secrets are stored in Github and are set via workflow.
+* k8s-sonarqube deployment. Codebase forked from https://github.com/GoldJns/rateme-nextgen-sonarqube
 
 
 ## Deployment
