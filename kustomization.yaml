@@ -7,8 +7,8 @@ labels:
 
 resources:
 - sonar-namespace.yaml
-- postgres-pvc.yaml
-- sonar-pvc.yaml
-- postgres-app.yaml
-- sonar-app.yaml
-- sonar-ingress.yaml
+- postgres/postgres-pvc.yaml
+- sonar/sonar-pvc.yaml
+- postgres/postgres-app.yaml
+- sonar/sonar-app.yaml
+- sonar/sonar-ingress.yaml
