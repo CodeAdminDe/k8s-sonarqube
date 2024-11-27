@@ -4,11 +4,17 @@ metadata:
   name: sonar
   namespace: sonar
   annotations:
-    kubernetes.io/ingress.class: "gce"
+    cert-manager.io/cluster-issuer: "acme-letsencrypt-staging"
+  #  cert-manager.io/issuer: "letsencrypt-prod"
 spec:
-  ingressClassName: "gce"
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - sonar.example.com
+      secretName: sonar-example-com-staging-tls
+      #secretName: sonar-example-com-prod-tls
   rules:
-    - host: sonar.rateme-nextgen.com
+    - host: sonar.example.com
       http:
         paths:
           - path: /
