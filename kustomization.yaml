@@ -16,8 +16,12 @@ resources:
 - sonar/sonar-app.yaml
 - sonar/sonar-ingress.yaml
 
-patches:
+
 # yep.. you should add your own and secure secrets within an overlay
+# you should configure your host, instead of doing it with the init container... you do not want to make the namespace privileged, really..
+# fix for elasticsearch usage with sonarqube:10.7.0-community and persistent volume
+# to update the image without changing the base, if you like
+patches:
   - path: delete-secret.yaml
     target: 
       kind: Secret
@@ -25,14 +29,11 @@ patches:
       kind: Deployment
       name: sonar
     patch: |-
-# you should configure your host, instead of doing it with the init container... you do not want to make the namespace privileged, really..
       - op: remove
         path: /spec/template/spec/initContainers
-# fix for elasticsearch usage with sonarqube:10.7.0-community and persistent volume
       - op: add
         path: /spec/template/spec/securityContext
         value: {fsGroup: 1000}
-# to update the image without changing the base, if you like
 #      - op: replace
 #        path: /spec/template/spec/containers/0/image
 #        value: "sonarqube:10.7.0-community"
