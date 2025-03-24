@@ -42,8 +42,8 @@ spec:
             privileged: true
       containers:
         - name: sonarqube
-          image: sonarqube:10.7.0-community
-          imagePullPolicy: IfNotPresent
+          image: sonarqube:community
+          imagePullPolicy: Always
           ports:
             - containerPort: 9000
           envFrom:
