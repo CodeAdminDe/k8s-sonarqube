@@ -51,7 +51,7 @@ spec:
         - containerPort: 5432
         env:
         - name: ALLOW_EMPTY_PASSWORD
-          value: "yes"
+          value: "no"
         envFrom:
         - secretRef:
             name: postgres
