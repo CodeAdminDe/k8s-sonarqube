@@ -1,5 +1,8 @@
 # k8s-sonarqube
 
+> **WARN: This repo is not production ready and it does not get regular updates! At most, it should be used as a source of ideas!**
+
+
 * k8s-sonarqube deployment. Codebase forked from https://github.com/GoldJns/rateme-nextgen-sonarqube
 
 
@@ -9,10 +12,3 @@ Via kustomize:
 ```sh
 kubectl apply -k .
 ```
-
-## Notes
-
-> If you want to use this repo, you must at least:
-> * Add secure secrets via overlays into your own env!!
-> * Change the admin password at first boot.
-> * Check and create NetworkPolies as desired.
